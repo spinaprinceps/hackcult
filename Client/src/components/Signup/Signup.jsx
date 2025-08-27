@@ -14,7 +14,7 @@ const SignUp = () => {
     setError(""); // Reset error state before submission
 
     try {
-      const response = await axios.post(`BACKEND_URL/signup`, {
+      const response = await axios.post(`${import.meta.env.BACKEND_URL}/signup`, {
         name,
         email,
         password,
