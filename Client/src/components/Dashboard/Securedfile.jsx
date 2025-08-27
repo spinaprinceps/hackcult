@@ -12,7 +12,7 @@ const SecuredFile = () => {
     }
 
     try {
-      const response = await fetch(`http://localhost:3001/decrypt/${filename}`);
+      const response = await fetch(`${process.env.BACKEND_URL}/decrypt/${filename}`);
       if (!response.ok) {
         throw new Error(`Error: ${response.status} ${response.statusText}`);
       }
