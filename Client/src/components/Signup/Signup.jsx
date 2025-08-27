@@ -12,9 +12,10 @@ const SignUp = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setError(""); // Reset error state before submission
+const signupUrl = `${import.meta.env.BACKEND_URL}/signup`;
 
     try {
-      const response = await axios.post(`${import.meta.env.BACKEND_URL}/signup`, {
+      const response = await axios.post( signupUrl, {
         name,
         email,
         password,
