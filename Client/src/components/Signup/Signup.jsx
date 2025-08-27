@@ -14,7 +14,7 @@ const SignUp = () => {
     setError(""); // Reset error state before submission
 
     try {
-      const response = await axios.post("http://localhost:3002/signup", {
+      const response = await axios.post(`${process.env.BACKEND_URL}/signup`, {
         name,
         email,
         password,
