@@ -13,7 +13,7 @@ const Login = () => {
     setError(""); // Clear any previous error messages
 
     try {
-      const response = await axios.post("http://localhost:3002/login", {
+      const response = await axios.post(`${process.env.BACKEND_URL}/login`, {
         email,
         password,
       });
