@@ -16,7 +16,7 @@ const Dash = () => {
         setFiles((prev) => [...prev, fileObj]);
 
         axios
-          .post(UPLOAD_URL, formData, {
+          .post(`${process.env.REACT_APP_BACKEND_URL}/upload`, formData, {
             onUploadProgress: (progressEvent) => {
               const progress = Math.round(
                 (progressEvent.loaded / progressEvent.total) * 100
